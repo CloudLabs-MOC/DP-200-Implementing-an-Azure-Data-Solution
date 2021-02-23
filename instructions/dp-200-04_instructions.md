@@ -43,15 +43,17 @@ The main task for this exercise are as follows:
 
 ### Task 1: Create an Azure Cosmos DB instance
 
-1. In the Azure portal, if neccesary click on the **Home** hyperlink.
+1. Before starting just to familiarize, we will be using deployment id for naming convention where xxxxxx will be asked to replace with deployment id and it can be found from the environment details tab from the right side of your environment.
 
-2. Navigate to the **+ Create a resource** icon.
+2. In the Azure portal, if neccesary click on the **Home** hyperlink.
 
-3. In the New screen, click in the **Search the Marketplace** text box, and type the word **Cosmos**. Click **Azure Cosmos DB** in the list that appears.
+3. Navigate to the **+ Create a resource** icon.
 
-4. In the **Azure Cosmos DB** screen, click **Create**.
+4. In the New screen, click in the **Search the Marketplace** text box, and type the word **Cosmos**. Click **Azure Cosmos DB** in the list that appears.
 
-5. From the **Create Azure Cosmos DB Account** screen, create an Azure Cosmos DB Account with the following settings:
+5. In the **Azure Cosmos DB** screen, click **Create**.
+
+6. From the **Create Azure Cosmos DB Account** screen, create an Azure Cosmos DB Account with the following settings:
 
     - In the Project details of the screen, type in the following information
     
@@ -73,13 +75,13 @@ The main task for this exercise are as follows:
 
             ![Creating Azure Cosmos DB in the Azure portal](Linked_Image_Files/M04-E01-T01-img01.png)
 
-6. In the **Create Azure Cosmos DB Account** blade, click **Review + create**.
+7. In the **Create Azure Cosmos DB Account** blade, click **Review + create**.
 
-7. After the validation of the **Create Azure Cosmos DB Account** blade, click **Create**.
+8. After the validation of the **Create Azure Cosmos DB Account** blade, click **Create**.
 
    > **Note**: The provision will takes approximately 5 minutes. What is often avoided in these labs is a description of the additional tabs when you provision any service in Azure. You may notice that in the provisioning screen there will be additional tabs such as Network, Tags or Advanced. This enables you to define any customized settings for a service. For example, the network tab of many services enables you to define the configuration of virtual networks, so that you are able to control and secure the network traffic against a given data service. The Tags option  are name/value pairs that enable you to categorize resources and view consolidated billing by applying the same tag to multiple resources and resource groups. Advanced tabs will vary dependant on the service that has it. But it is important to note that you have control over these areas and you wil want to collaborate with your Network admins or indeed your finance department to see how these options should be configured.
 
-8. When the provisioning is complete, the "Your deployment is complete" screen appears, click on **Go to resource** and move onto the next exercise. 
+9. When the provisioning is complete, the "Your deployment is complete" screen appears, click on **Go to resource** and move onto the next exercise. 
 
 >**Result** In this exercise, you have provisioned an Azure Cosmos DB Account
 
