@@ -1,9 +1,9 @@
 [ {
-  "Name": "Enabling Team Based Data Science with Azure Databricks",
+  "Name": "Building Globally Distributed Databases with Cosmos DB",
   "Language": "English",
   "Files": [
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-200-Implementing-an-Azure-Data-Solution/tree/prodInstructions/dp-200-03_instructions.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-200-Implementing-an-Azure-Data-Solution/tree/prodInstructions/dp-200-04_instructions.md",
       "Order": 1
     }
   ]

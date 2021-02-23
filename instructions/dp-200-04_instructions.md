@@ -1,11 +1,9 @@
-﻿# DP 200 - Implementing a Data Platform Solution
-# Lab 4 - Building Globally Distributed Databases with Cosmos DB
+# DP 200 - Implementing a Data Platform Solution
+# Lab 3 - Building Globally Distributed Databases with Cosmos DB
 
 **Estimated Time**: 60 minutes
 
-**Pre-requisites**: It is assumed that the case study for this lab has already been read. It is assumed that the content and lab for module 1: Azure for the Data Engineer has also been completed
-
-**Lab files**: The files for this lab are located in the _Allfiles\Labfiles\Starter\DP-200.4_ folder.
+**Lab files**: The files for this lab are located in the _C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.4_ folder.
 
 ## Lab overview
 
@@ -59,11 +57,11 @@ The main task for this exercise are as follows:
     
         - **Subscription**: the name of the subscription you are using in this lab
 
-        - **Resource group**: **awrgstudxx**, where **xx** are your initials
+        - **Resource group**: select the existing resource group with name **awrgstud-{deploymentId}**
 
     - In the Instance details of the screen, type in the following information
 
-        - **Account name**: **awcdbstudxx**, where **xx** are your initials.
+        - **Account name**: **awcdbstud-xxxxxx**, where **xxxxxx** is the deployment id and you can find it from the environment details tab.
 
         - **API**: **Core(SQL)**
 
@@ -107,7 +105,7 @@ The main tasks for this exercise are as follows:
 
 2. In the Cosmos DB screen,  click on the **Overview** link.
 
-3. In the **awcdbstudxx** screen, click **+ Add Container**. This opens up the **awcdbstudxx Data Explorer** screen with the **Add Container** blade.
+1. In the **awcdbstud-{deploymentId}** screen, click **+ Add Container**. This opens up the **awcdbstud-{deploymentId} Data Explorer** screen with the **Add Container** blade.
 
 4. In the **Add Container** blade, create a Products database with a container named Clothing with the following settings:
 
@@ -127,7 +125,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: Add data using the portal
 
-1. In the **awcdbstudcto - Data Explorer** screen, on the Data Explorer toolbar, opposite the button for New Container, click on the **Open Full Screen** button. In the Open Full Screen dialog box, click **Open**. A new tab opens up in Microsoft Edge.
+1. In the **awcdbstud-{deploymentId} - Data Explorer** screen, on the Data Explorer toolbar, opposite the button for New Container, click on the **Open Full Screen** button. In the Open Full Screen dialog box, click **Open**. A new tab opens up in Microsoft Edge.
 
 2. In the **SQL API** pane, click in the refresh icon, and then expand **Products**, followed by **Clothing** and click on **Items**. 
 
@@ -413,7 +411,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Replicate Data to Multiple Regions
 
-1. In the Azure Portal navigate to the Cosmos DB resource **awcdbstudxx** window, in the blade **Settings**,  click on **Replicate data globally**.
+1. In the Azure Portal navigate to the Cosmos DB resource **awcdbstud-xxxxxx**, where **xxxxxx** is the deployment id and you can find it from the environment details tab, in the blade **Settings**,  click on **Replicate data globally**.
 
     ![Global replication of Cosmos DB in the Azure portal](Linked_Image_Files/M04-E03-T01-img01.png)
 
@@ -423,7 +421,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: Managing Failover.
 
-1. In the **awcdbstudxx - Replicate data globally** window, click on **Manual Failover**.
+1. In the **awcdbstud-deploymentId - Replicate data globally** window, click on **Manual Failover**.
 
 2. Click on the **Read Region** datacenter location, then click on the check box next to "I understand and agree to trigger a failover on my current Write Region.", and then click on **OK**.
 
@@ -431,7 +429,7 @@ The main tasks for this exercise are as follows:
 
 ![Manual Failover of Cosmos DB in the Azure portal](Linked_Image_Files/M04-E03-T02-img1.png)
 
-3. In the **awcdbstudxx - Replicate data globally** window, click on **Automatic Failover**
+1. In the **awcdbstud-deploymentId - Replicate data globally** window, click on **Automatic Failover**
 
 4. In the "Automatic Failover" screen, click on the **ON** button, and then click on **OK**.
 
