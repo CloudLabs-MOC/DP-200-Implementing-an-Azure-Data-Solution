@@ -1,11 +1,11 @@
-﻿# DP 200 - Implementing a Data Platform Solution
-# Lab 6 - Performing Real-Time Analytics with Stream Analytics
+# DP 200 - Implementing a Data Platform Solution
+# Lab 5 - Performing Real-Time Analytics with Stream Analytics
 
 **Estimated Time**: 60 minutes
 
-**Pre-requisites**: It is assumed that the case study for this lab has already been read. It is assumed that the content and lab for module 1: Azure for the Data Engineer has also been completed
+**Pre-requisites**: It is assumed that the case study for this lab has already been read.
 
-**Lab files**: The files for this lab are located in the _Allfiles\Labfiles\Starter\DP-200.6_ folder.
+**Lab files**: The files for this lab are located in the `C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter` folder inside the virtual machine..
 
 ## Lab overview
 
@@ -33,7 +33,7 @@ At the end of this lad, you will have:
 3. Initiated a data generation application
 4. Processed Data with Stream Analytics Jobs
 
-> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
+> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
 
 ## Exercise 1: Explain data streams and event processing
 
@@ -45,19 +45,14 @@ The main task for this exercise are as follows:
 
 1. From the case study and the scenario, identify the data stream ingestion technology for AdventureWorks, and the high-level tasks that you will conduct as a data engineer to complete the social media analysis requirements.
 
-2. The instructor will discuss the findings with the group.
 
 ### Task 1: Identify the data requirements and structures of AdventureWorks.
 
-1. From the lab virtual machine, start **Microsoft Word**, and open up the file **DP-200-Lab06-Ex01.docx** from the **Allfiles\Labfiles\Starter\DP-200.6** folder.
+1. Before starting just to familiarize, we will be using deployment id for naming convention where xxxxxx will be asked to replace with deployment id and it can be found from the environment details tab from the right side of your environment.
 
-2. As a group, spend **10 minutes** discussing and listing the data requirements and data structure that your group has identified within the case study document.
+2. From the lab virtual machine, start **Microsoft Word**, and open up the file **DP-200-Lab06-Ex01.docx** from the **C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.6** folder.
 
-### Task 2: Discuss the findings with the Instructor
-
-1. The instructor will stop the group to discuss the findings.
-
-> **Result**: After you completed this exercise, you have created a Microsoft Word document that shows a table of data streaming ingestion and the high-level tasks that you will conduct as a data engineer to complete the social media analysis requirements .
+3. As a group, spend **10 minutes** discussing and listing the data requirements and data structure that your group has identified within the case study document.
 
 ## Exercise 2: Data Ingestion with Event Hubs.
   
@@ -81,8 +76,8 @@ The main tasks for this exercise are as follows:
 
 3. In the Create Namespace blade, type out the following options:
     - **Subscription**: **Your subscription**
-    - **Resource group**: **awrgstudxx**
-    - **Namespace Name**: **xx-phoneanalysis-ehn**, where xx are your initials
+    - **Resource group**: use the existing resource group **awrgstud-DeploymentID**
+    - **Namespace Name**: **phoneanalysis-ehn-xxxxxx**, where xxxxxx is the deploymentID
     - **Location**: select the location closest to you
     - **Pricing Tier**: **Standard**    
     - **Throughput Units**: **20**
@@ -98,13 +93,13 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, click on the **Home** hyperlink at the top left of the screen.
 
-2. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**, where **xx** are your initials
+1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstud-DeploymentID**
 
-3. Click on **xx-phoneanalysis-ehn**, where **xx** are your initials.
+1. Click on **phoneanalysis-ehn-xxxxxx**, where **xxxxxx** is the deploymentID.
 
-4. In the **xx-phoneanalysis-ehn** screen, click on **+ Event Hubs**.
+1. In the **phoneanalysis-ehn-xxxxxx** screen, click on **+ Event Hubs**.
 
-5. Provide the name **xx-phoneanalysis-eh**, leave the other settings to thier default values and then select **Create**.
+1. Provide the name **phoneanalysis-eh-xxxxxx**, where xxxxxx is the deploymentID, leave the other settings to thier default values and then select **Create**.
 
     ![Creating an Event Hub in Azure portal](Linked_Image_Files/M06-E02-T02-img01.png)
 
@@ -112,15 +107,15 @@ The main tasks for this exercise are as follows:
 
 ### Task 3: Configure Event Hub security
 
-1. In the Azure portal, in the **xx-phoneanalysis-ehn** screen, where **xx** are your initials. Scroll to the bottom of the window, and click on **xx-phoneanalysis-eh** event hub.
+1. In the Azure portal, in the **phoneanalysis-ehn-xxxxxx**, where xxxxxx is the deploymentID. Scroll to the bottom of the window, and click on **phoneanalysis-eh-xxxxxx** event hub.
 
 2. To grant access to the event hub, in the blade under the section **settings** on the left click **Shared access policies**.
 
-3. Under the **xx-phoneanalysis-eh - Shared access policies** screen, create a policy with **Manage** permissions by selecting **+ Add**. Give the policy the name of **xx-phoneanalysis-eh-sap** , check **Manage**, and then click **Create**.
+1. Under the **phoneanalysis-eh-xxxxxx - Shared access policies** screen, create a policy with **Manage** permissions by selecting **+ Add**. Give the policy the name of **phoneanalysis-eh-sap-xxxxxx**, where xxxxxx is the deploymentID , check **Manage**, and then click **Create**.
 
     ![Creating a Shared Access Policy for Event Hubs in Azure portal](Linked_Image_Files/M06-E02-T03-img01.png)
 
-4. Click on your new policy **xx-phoneanalysis-eh-sap** after it has been created, and then select the copy button for the **CONNECTION STRING - PRIMARY KEY** and paste the CONNECTION STRING - PRIMARY KEY  into Notepad, this is needed later in the exercise.
+1. Click on your new policy **phoneanalysis-eh-sap-xxxxxx** after it has been created, and then select the copy button for the **CONNECTION STRING - PRIMARY KEY** and paste the CONNECTION STRING - PRIMARY KEY  into Notepad, this is needed later in the exercise.
 
     >**NOTE**: The connection string looks as follows:
     > ```CMD
@@ -146,7 +141,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Updates the application connection string.
 
-1. Browse to the location **\Labfiles\Starter\DP-200.6\DataGenerator**
+1. Browse to the location **C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.6\DataGenerator**
 
 2. Open the **telcodatagen.exe.config** file in a text editor of your choice
 
@@ -163,7 +158,7 @@ The main tasks for this exercise are as follows:
 
 2. Right click **Command Prompt**, click **Run as Administer**, and in the User Access Control screen, click **Yes**
 
-3. In Command Prompt, browse to the location **\Labfiles\Starter\DP-200.6\DataGenerator**
+1. In Command Prompt, browse to the location **cd C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.6\DataGenerator**
 
 4. Type in the following command: 
 
@@ -220,7 +215,7 @@ The main tasks for this exercise are as follows:
 2. In the **New Stream Analytics job** screen, fill out the following details and then click on **Create**:
     - **Job name**: phoneanalysis-asa-job.
     - **Subscription**: select your subscription
-    - **Resource group**: awrgstudxx
+    - **Resource group**: awrgstud-DeploymentID
     - **Location**: choose a location nearest to you.
     - Leave other options to their default settings
 
@@ -230,7 +225,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: Specify the a Stream Analytics job input.
 
-1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**,  where **xx** are your initials.
+1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstud-DeploymentID**.
 
 2. Click on **phoneanalysis-asa-job**.
 
@@ -242,11 +237,11 @@ The main tasks for this exercise are as follows:
     - **Input alias**: Enter a name for this job input as **PhoneStream**.
     - **Select Event Hub from your subscriptions**: checked
     - **Subscription**: Your subscription name
-    - **Event Hub Namespace**: xx-phoneanalysis-ehn
-    - **Event Hub Name**: Use existing named xx-phoneanalysis-eh
+    - **Event Hub Namespace**: phoneanalysis-ehn-xxxxxx
+    - **Event Hub Name**: Use existing named phoneanalysis-eh-xxxxxx
     - **Event Hub Consumer Group**: Use existing
     - **Authentication Method**: Connection string
-    - **Event Hub Policy Name**: use existing named xx-phoneanalysis-eh-sap
+    - **Event Hub Policy Name**: phoneanalysis-eh-sap-xxxxxx
     - Leave the rest of the entries as default values. Finally, click **Save***.
 
         ![Create a Job Input Stream Analytics Job in the Azure Portal](Linked_Image_Files/M06-E04-T02-img01.png)
@@ -265,7 +260,7 @@ The main tasks for this exercise are as follows:
     - **Output alias**: **PhoneCallRefData**
     - **Select Event Hub from your subscriptions**: checked
     - **Subscription**: Your subscription name
-    - **Storage account**: **:awsastudxx**:, where xx is your initials
+    - **Storage account**:  Select **:awsastudxxxxxx**:, where xxxxxx is the deploymentID
     - **Container**: **Use existing** and select **phonecalls**
     - Leave the rest of the entries as default values. Finally, click **Save**.
 
@@ -325,7 +320,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 6: Validate streaming data is collected
 
-1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**, and then click on **awsastudxx**, where **xx** are your initials.
+1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxxxxxx**, and then click on **awsastudxxxxxx**, where **xxxxxx** is the deploymentID.
 
 2. In the Azure portal, click **Containers** box, and then click on the container named **phonecalls**.
 
@@ -341,7 +336,7 @@ The main tasks for this exercise are as follows:
 
 ## Close down
 
-1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**, and then click on **phoneanalysis-asa-job**.
+1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstud-DeploymentID**, and then click on **phoneanalysis-asa-job**.
 
 2. In the **phoneanalysis-asa-job** screen, click on **Stop**. In the **Stop Streaming job** dialog box, click on **Yes**.
 

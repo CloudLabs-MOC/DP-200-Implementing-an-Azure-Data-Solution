@@ -1,11 +1,9 @@
-﻿# DP 200 - Implementing a Data Platform Solution
-# Lab 8 - Securing Azure Data Platforms
+# DP 200 - Implementing a Data Platform Solution
+# Lab 7 - Securing Azure Data Platforms
 
 **Estimated Time**: 75 minutes
 
-**Pre-requisites**: It is assumed that the case study for this lab has already been read. It is assumed that the content and lab for module 1 to module 7 has been completed.
-
-**Lab files**: The files for this lab are located in the _Allfiles\Labfiles\Starter\DP-200.8_ folder.
+**Lab files**: The files for this lab are located in the _C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.8_ folder.
 
 ## Lab overview
 
@@ -27,7 +25,7 @@ As a senior data engineer within AdventureWorks, you are responsible for ensurin
 
 You have also been asked to tighten up the security of the SQL Database DeptDatabasesxx and have been asked to setup auditing against the database so that you can monitor access to the database. Furthermore, you have learned that that the Manage permission for your event hub is not restrictive enough, and you want to remove this permission.
 
-At the end of this lad, you will have:
+At the end of this lab, you will have:
 
 1. Explained Security
 2. Described key security components
@@ -35,7 +33,7 @@ At the end of this lad, you will have:
 4. Secured Data Stores
 5. Secured Streaming Data
 
-> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
+> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
 
 ## Exercise 1: An introduction to security
 
@@ -47,19 +45,14 @@ The main task for this exercise are as follows:
 
 1. Security as a layered approach.
 
-2. The instructor will discuss the findings with the group.
 
 ### Task 1: Security as a layered approach.
 
-1. From the lab virtual machine, start **Microsoft Word**, and open up the file **DP-200-Lab08-Ex01.docx** from the **Allfiles\Labfiles\Starter\DP-200.8** folder.
+1. Before starting just to familiarize, we will be using deployment id for naming convention where xxxxxx will be asked to replace with deployment id and it can be found from the environment details tab from the right side of your environment.
 
-2. From the course content, case study and the scenarios taken in the course so far, spend **10 minutes** in a group identifying the layers of security that you have impacted so far to secure AdventureWorks in the labs. Find three examples.
+2. From the lab virtual machine, open up the file **DP-200-Lab08-Ex01.docx** from the **C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.8** folder.This file will open in wordpad.
 
-### Task 2: Discuss the findings with the Instructor
-
-1. The instructor will stop the group to discuss the findings.
-
-> **Result**: After you completed this exercise, you have created a Microsoft Word document that contains at least three examples of how you have implemented security at Adventureworks and which layer of security you have impacted.
+3. From the course content, case study and the scenarios taken in the course so far, spend **10 minutes** in a group identifying the layers of security that you have impacted so far to secure AdventureWorks in the labs. Find three examples.
 
 ## Exercise 2: Key security components
   
@@ -98,19 +91,11 @@ The main tasks for this exercise are as follows:
 
 1. Determining the appropriate security approach for Azure Blob
 
-2. Discuss the findings with the Instructor
-
 ### Task 1: Determining the appropriate security approach for Azure Blob
 
 1. You have been approached by your in-house web developer to help give access to a third party web design company to the web images that are in the awsastudxx storage account. As a senior data engineer within AdventureWorks, what steps would you need to take to ensure this can happen while applying the correct due diligence.
 
-2. From the lab virtual machine, start **Microsoft Word**, and open up the file **DP-200-Lab08-Ex03.docx** from the **Allfiles\Labfiles\Starter\DP-200.8** folder.
-
-### Task 2: Discuss the findings with the Instructor
-
-1. The instructor will stop the group to discuss the findings.
-
-> **Result**: After you completed this exercise, you have created a Microsoft Word document that contains the steps that you would take to provide secure access to a Blob storage account to a third-party web development company.
+2. From the lab virtual machine, start **Microsoft Word**, and open up the file **DP-200-Lab08-Ex03.docx** from the **C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.8** folder.
 
 ## Exercise 4: Securing Data Stores
   
@@ -128,7 +113,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Enabling Auditing
 
-1. In the Azure portal,  click **Resource groups**, and then click awrgstudxx, and then click on the sqlservicexx and navigate to **AdventureworksLT (sqlservicekdwj/AdventureworksLT)**.
+1. In the Azure portal,  click **Resource groups**, and then click **awrgstud-deploymentID**, and then click on the **sqlservice-deploymentId** and navigate to **AdventureworksLT (sqlservicekdwj/AdventureworksLT)**.
 
 2. In the AdventureworksLT (sqlservicekdwj/AdventureworksLT) screen, click on the **Auditing** blade.
 
@@ -138,7 +123,7 @@ The main tasks for this exercise are as follows:
 
 5. In the **Storage Setting** screen, click **Subscription - change storage subscription**, and then click your subscription.
 
-6. In the **Storage Setting** screen, click **Storage Settings - Configure required settings**. In the **Choose storage account** screen, click **awsastudxx**
+6. In the **Storage Setting** screen, click **Storage Settings - Configure required settings**. In the **Choose storage account** screen, click **awsastud(deploymentId)**
 
 7. In the **Retention Days** text box, type **90**, and then click on **OK**.
 
@@ -148,7 +133,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: Query the database
 
-1. In the Azure portal,  click **Resource groups**, and then click awrgstudxx, and then click on the sqlservicexx and navigate to **AdventureworksLT (sqlservicekdwj/AdventureworksLT)**.
+1. In the Azure portal,  click **Resource groups**, and then click **awrgstud-deploymentID**, and then click on the **sqlservice-deploymentId** and navigate to **AdventureworksLT (sqlservicekdwj/AdventureworksLT)**.
 
 2. Navigate to the **query editor**
 
@@ -168,7 +153,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: View the Audit Log
 
-1. Return to the Azure Portal. In the AdventureWorksLT (sqlservicexx/AdventureWorksLT) - Auditing screen, click on **View Audit Logs**
+1. Return to the Azure Portal. In the AdventureWorksLT (sqlservice-deploymentID/AdventureWorksLT) - Auditing screen, click on **View Audit Logs**
 
 2. Note in the **Audit records** log file the **Failed Authentication** record. Close down the **Audit records** screen
 
@@ -188,13 +173,13 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Changing Event Hub Permissions
 
-1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**, and then click on **xx-phoneanalysis-ehn**, where **xx** are your initials
+1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstud-deploymentID**, and then click on **phoneanalysis-ehn-deploymentID**
 
-2. In the Azure portal, in the **xx-phoneanalysis-ehn**, where **xx** are your initials. Scroll to the bottom of the window, and click on **xx-phoneanalysis-eh** event hub.
+2. In the Azure portal, in the **phoneanalysis-ehn-deploymentID**. Scroll to the bottom of the window, and click on **co-phoneanalysis-eh** event hub.
 
 3. To grant access to the event hub, click **Shared access policies**.
 
-4. Under the **xx-phoneanalysis-eh - Shared access policies** screen, click on **phoneanalysis-eh-sap**.
+4. Under the **co-phoneanalysis-eh - Shared access policies** screen, click on **phoneanalysis-eh-sap**.
 
 5. Click on the checkbox next to the **Manage** permissions to remove it, and then click **Save**.
 
