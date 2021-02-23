@@ -170,7 +170,7 @@ The main tasks for this exercise are as follows:
 
 1. Create and configure a storage account named **awdlsstudxxxxxx** as a Data Lake Store Gen2 storage type in the region closest to the lab location, within the resource group awrgstudxxxxxx, where **xxxxxx** is the deployment ID .
 
-2. Create containers named **logs** and **data** within the awdlsstudxx storage account.
+2. Create containers named **logs** and **data** within the awdlsstud(deploymentId) storage account.
 
 
 ### Task 1: Create and configure a storage account as a Data Lake Store Gen II store.
