@@ -45,13 +45,15 @@ The main task for this exercise are as follows:
 
 ### Task 1: Create and configure a SQL Database instance.
 
-1. In the Azure portal, navigate to the **+ Create a resource** blade.
+1. Before starting just to familiarize, we will be using deployment id for naming convention where xxxxxx will be asked to replace with deployment id and it can be found from the environment details tab from the right side of your environment.
 
-2. In the New screen, click the **Search the Marketplace** text box, and type the word **SQL Database**. Click **SQL Database** in the list that appears.
+2. In the Azure portal, navigate to the **+ Create a resource** blade.
 
-3. In the **SQL Database** screen, click **Create**.
+3. In the New screen, click the **Search the Marketplace** text box, and type the word **SQL Database**. Click **SQL Database** in the list that appears.
 
-4. From the **Create SQL Database** screen, create an Azure SQL Database with the following settings:
+4. In the **SQL Database** screen, click **Create**.
+
+5. From the **Create SQL Database** screen, create an Azure SQL Database with the following settings:
 
     - In the Project details section, type in the following information
     
@@ -82,9 +84,9 @@ The main task for this exercise are as follows:
 
     ![Creating a SQL Database in the Azure portal](Linked_Image_Files/M05-E01-T01-img02.png)
 
-5. In the **Create SQL Database** blade, click **Review + create**.
+6. In the **Create SQL Database** blade, click **Review + create**.
 
-6. After the validation of the **Create SQL Database*** blade, click **Create**.
+7. After the validation of the **Create SQL Database*** blade, click **Create**.
 
    > **Note**: The provision will takes approximately 4 minutes.
 
