@@ -1,9 +1,9 @@
 [ {
-  "Name": "Building Globally Distributed Databases with Cosmos DB",
+  "Name": "Securing Azure Data Platforms",
   "Language": "English",
   "Files": [
     {
-      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-200-Implementing-an-Azure-Data-Solution/tree/prodInstructions/dp-200-04_instructions.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-200-Implementing-an-Azure-Data-Solution/tree/prodInstructions/dp-200-08_instructions.md",
       "Order": 1
     }
   ]
