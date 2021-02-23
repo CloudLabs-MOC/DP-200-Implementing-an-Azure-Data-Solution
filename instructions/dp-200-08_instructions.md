@@ -25,7 +25,7 @@ As a senior data engineer within AdventureWorks, you are responsible for ensurin
 
 You have also been asked to tighten up the security of the SQL Database DeptDatabasesxx and have been asked to setup auditing against the database so that you can monitor access to the database. Furthermore, you have learned that that the Manage permission for your event hub is not restrictive enough, and you want to remove this permission.
 
-At the end of this lad, you will have:
+At the end of this lab, you will have:
 
 1. Explained Security
 2. Described key security components
