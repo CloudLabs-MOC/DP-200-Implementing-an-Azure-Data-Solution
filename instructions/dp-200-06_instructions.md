@@ -48,9 +48,11 @@ The main task for this exercise are as follows:
 
 ### Task 1: Identify the data requirements and structures of AdventureWorks.
 
-1. From the lab virtual machine, start **Microsoft Word**, and open up the file **DP-200-Lab06-Ex01.docx** from the **Allfiles\Labfiles\Starter\DP-200.6** folder.
+1. Before starting just to familiarize, we will be using deployment id for naming convention where xxxxxx will be asked to replace with deployment id and it can be found from the environment details tab from the right side of your environment.
 
-2. As a group, spend **10 minutes** discussing and listing the data requirements and data structure that your group has identified within the case study document.
+2. From the lab virtual machine, start **Microsoft Word**, and open up the file **DP-200-Lab06-Ex01.docx** from the **C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.6** folder.
+
+3. As a group, spend **10 minutes** discussing and listing the data requirements and data structure that your group has identified within the case study document.
 
 ## Exercise 2: Data Ingestion with Event Hubs.
   
