@@ -1,11 +1,10 @@
-﻿# DP 200 - Implementing a Data Platform Solution
-# Lab 2 - Working with Data Storage
+# DP 200 - Implementing a Data Platform Solution
+# Lab 1 - Working with Data Storage
 
 **Estimated Time**: 60 minutes
 
-**Pre-requisites**: It is assumed that the case study for this lab has already been read. It is assumed that the content and lab for module 1: Azure for the Data Engineer has also been completed
 
-**Lab files**: The files for this lab are located in the _Allfiles\Labfiles\Starter\DP-200.2_ folder.
+**Lab files**: The files for this lab are located in the _C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.2
 
 ## Lab overview
 
@@ -33,7 +32,7 @@ At the end of this work, you will have:
 3. Explained Azure Data Lake Storage
 4. Uploaded data into Azure Data Lake
 
-> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
+> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
 
 ## Exercise 1: Choose a data storage approach in Azure
 
@@ -45,19 +44,12 @@ The main task for this exercise are as follows:
 
 1. From the case study, identify the data storage requirements for the static images for the website, and for the predictive analytics solution.
 
-2. The instructor will discuss the findings with the group.
 
 ### Task 1: Identify the data storage requirements and structures of AdventureWorks.
 
-1. From the lab virtual machine, start **Microsoft Word**, and open up the file **DP-200-Lab02-Ex01.docx** from the **Allfiles\Labfiles\Starter\DP-200.2** folder.
+1. From the lab virtual machine, open up the file **DP-200-Lab02-Ex01** from the **C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.2** folder.The file will open in wordpad.
 
 2. Spend **10 minutes** documenting the data storage requirements as outlined in the scenario of this lab. You can also use the case study document for additional reference.
-
-### Task 2: Discuss the findings with the Instructor
-
-1. The instructor will stop the group to discuss the findings.
-
-> **Result**: After you completed this exercise, you have created a Microsoft Word document that shows two tables of data storage requirements.
 
 ## Exercise 2: Create an Azure Storage Account
   
@@ -67,39 +59,14 @@ Individual exercise
   
 The main tasks for this exercise are as follows:
 
-1. Create Azure resource group named **awrgstudxx** in the region closest to the lab location, where **xx** are your initials.
 
-2. Create and configure a storage account named **awsastudxx** in the region closest to the lab location within the resource group awrgstudxx, where **xx** are your initials.
+1. Create and configure a storage account named **awsastudxxxxxx** in the region closest to the lab location within the resource group awrgstudxxxxxx, where **xxxxxx**  is the deployment ID.
 
-3. Create a container named **images**, **phonecalls** and **tweets** within the awsastudxx storage account.
+1. Create a container named **images**, **phonecalls** and **tweets** within the awsastud(deploymentId) storage account.
 
 4. Upload some graphics to the images container of the storage account.
 
-### Task 1: Create and configure a resource group.
-
-1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the account that has been assigned to you for the course.
-
-2. In the Azure portal, click on the **Resource groups** icon.
-
-3. In the **Resource groups** screen, click on **+ Add** to create the first resource group with the following settings:
-
-    - **Subscription**: the name of the subscription you are using in this lab
-    
-    - **Resource group name**: **awrgstudxx**, where **xx** are your initials.
-
-    - **Resource group location**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
-
-      > **Note**: To identify Azure regions available in your subscription, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
-
-        ![Creating a Resource Group in the Azure portal](Linked_Image_Files/M02-E02-T01-img01.png)
-
-4. In the Create a resource group screen, click on **Review + Create**.
-
-5. In the Create a resource group screen, click on **Create**.
-
-> **Note**: it will take approximately 30 seconds to create a resource group. You can check the notifications area to check when the creation in complete.
-
-### Task 2: Create and configure a storage account.
+### Task 1: Create and configure a storage account.
 
 1. In the Azure portal, at the top left of the screen, click on the **Home** hyperlink
 
@@ -115,11 +82,11 @@ The main tasks for this exercise are as follows:
 
         - **Subscription**: the name of the subscription you are using in this lab
     
-        - **Resource group**: **awrgstudxx**, where **xx** are your initials.
+        - **Resource group**: select existing resource group with name **awrgstud-DeploymentId**.
 
     - Under the instance details, specify the following settings:
     
-        - **Storage account name**: **awsastudxx**, where **xx** are your initials.
+        - **Storage account name**: **awsastudxxxxxx**,  where **xxxxxx** is the deployment ID and you can find it from the environment details tab.
 
         - **Location**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
 
@@ -137,13 +104,13 @@ The main tasks for this exercise are as follows:
 
    > **Note**: The creation of the storage account will take approximately 90 seconds while it provisions the disks and the configuration of the disks as per the settings you have defined.
 
-### Task 3: Create and configure a container within the storage account.
+### Task 2: Create and configure a container within the storage account.
 
 1. In the Azure portal, a message states that _Your deployment is complete_, click on the button **Go to resource**.
 
-2. In the **awsastudxx** screen, where **xx** are your initials, under the **Blob Service** click **Containers**.
+1. In the **awsastud(deploymentID)** screen, From the left hand side navigation pane navigate to **Blob Service** and find **Containers**.
 
-3. In the **awsastudxx - Containers** screen, at the top left, click on the  **+ Container** button.
+1. In the **awsastud(deploymentID) - Containers** screen, at the top left, click on the  **+ Container** button.
 
 4. From the **New Container*** screen, create a container with the following settings:
 
@@ -155,7 +122,7 @@ The main tasks for this exercise are as follows:
 
 5. In the **New Container** screen, click **Create**.
 
-   > **Note**: The creation of the container is immediate and will appear in the list of the **awrgstudxx - Containers** screen.
+   > **Note**: The creation of the container is immediate and will appear in the list of the **awrgstud(deploymentID) - Containers** screen.
 
 6. Repeat steps 4 -5 to create a container named **phonecalls** with the public access level of **Private (no anonymous access)**
 
@@ -163,15 +130,15 @@ The main tasks for this exercise are as follows:
 
     ![List of Containers in the Azure portal](Linked_Image_Files/M02-E02-T03-img02.png)
 
-### Task 4: Upload some graphics to the images container of the storage account.
+### Task 3: Upload some graphics to the images container of the storage account.
 
-1. In the Azure portal, in the **awsastudxx - Containers** screen, click on the **images** item in the list.
+1. In the Azure portal, in the **awsastud(deploymentID) - Containers** screen, click on the **images** item in the list.
 
 2. In the **images** screen, click on the **Upload** button.
 
 3. In the **Upload blob** screen, in the Files text box, click on the **folder** icon to the right of the text box.
 
-4. In the **Open** dialog box, browse to  **Labfiles\Starter\DP-200.2\website graphics** folder. Highlight the following files:
+1. In the **Open** dialog box, browse to  **C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.2\website graphics** folder. Highlight the following files:
 
     - one.png
 
@@ -187,11 +154,11 @@ The main tasks for this exercise are as follows:
 
 7. Close the **Upload blob** screen, and close the **images** screen.
 
-8. Close the **awsastudxx - Containers** screen, and in the Azure portal, navigate to the **Home** screen. 
+1. Close the **awsastud(deploymentID) - Containers** screen, and in the Azure portal, navigate to the **Home** screen. 
 
    > **Note**: The upload of the files will take approximately 5 seconds. Once completed, they will appear in a list in the upload blobs screen.
 
-> **Result**: After you completed this exercise, you have created a Storage account named awsastudxx that has a container named images that contains four graphics files that are ready to be used on the AdventureWorks website.
+> **Result**: After you completed this exercise, you have created a Storage account named awsastudxxxxxx that has a container named images that contains four graphics files that are ready to be used on the AdventureWorks website.
 
 ## Exercise 3: Explain Azure Data Lake Storage
   
@@ -201,7 +168,7 @@ Individual exercise
   
 The main tasks for this exercise are as follows:
 
-1. Create and configure a storage account named **awdlsstudxx** as a Data Lake Store Gen2 storage type in the region closest to the lab location, within the resource group awrgstudxx, where **xx** are your initials.
+1. Create and configure a storage account named **awdlsstudxxxxxx** as a Data Lake Store Gen2 storage type in the region closest to the lab location, within the resource group awrgstudxxxxxx, where **xxxxxx** is the deployment ID .
 
 2. Create containers named **logs** and **data** within the awdlsstudxx storage account.
 
@@ -220,11 +187,11 @@ The main tasks for this exercise are as follows:
 
         - **Subscription**: the name of the subscription you are using in this lab
     
-        - **Resource group name**: **awrgstudxx**, where **xx** are your initials.
+        - **Resource group name**: select existing resource group with name **awrgstud-DeploymentId**.
 
     - Under the instance details, specify the following settings:
 
-        - **Storage account name**: **awdlsstudxx**, where **xx** are your initials.
+        - **Storage account name**: **awdlsstudxxxxxx**, where **xxxxxx** is the deployment ID
 
         - **Location**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
 
@@ -250,9 +217,9 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, a message states that _Your deployment is complete_, click on the button **Go to resource**.
 
-2. In the **awdlsstudxx** screen, where **xx** are your initials, click **Containers**.
+1. In the **awdlsstud(deploymentID)** screen,  click **Containers**.
 
-3. In the **awrgstudxx - Containers** screen, at the top left, click on the  **+ Containers** button.
+1. In the **awrgstud(deploymentID) - Containers** screen, at the top left, click on the  **+ Containers** button.
 
 4. From the **New** screen, create two containers with the following name:
 
@@ -262,7 +229,7 @@ The main tasks for this exercise are as follows:
 
 5. In the **New Containers** screen, click **Create**.
 
-   > **Note**: The creation of the file system is immediate and will appear in the list of the **awdlsstudxx - Containers** screen as follows.
+   > **Note**: The creation of the file system is immediate and will appear in the list of the **awdlsstud(deploymentID) - Containers** screen as follows.
 
     ![File Systems listed in the Azure portal](Linked_Image_Files/M02-E03-T02-img01.png)
 
@@ -282,7 +249,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Install Storage Explorer.
 
-3. In the Azure portal, in the **awdlsstudxx** overview page, navigate to **Open in Explorer** and then click on the **Download Azure Storage Explorer** hyperlink.
+1. In the Azure portal, Open the storage account **awdlsstud(deploymentID)**, and navigate to **awdlsstud(deploymentID) - Overview** screen, click on **Open in Explorer**.
 
 4. You are taken to the following web page for [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) where there is a button that states **Download now**. click on this button.
 
@@ -310,7 +277,7 @@ The main tasks for this exercise are as follows:
 
 1. In Azure Storage Explorer, click on the arrow to expand your subscription.
 
-2. Under **Storage Accounts**, search for the storage account **awdlsstudxx (ADLS Gen2)**, and click on the arrow to expand it.
+1. Under **Storage Accounts**, search for the storage account **awdlsstud(deploymentID) (ADLS Gen2)**, and click on the arrow to expand it.
 
 3. Under **Blob Containers**, click on the arrow to expand it and show the **logs** file system. Click on the **logs** file system.
 
@@ -318,7 +285,7 @@ The main tasks for this exercise are as follows:
 
 5. In Upload Files dialog box, click on the ellipsis next to the **Selected files** text box.
 
-6. In the **Choose files to upload** dialog box, browse to **Labfiles\Starter\DP-200.2\logs** folder. Highlight the following files:
+1. In the **Choose files to upload** dialog box, browse to **C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.2\logs** folder. Highlight the following files:
 
     - weblogsQ1.log
 
@@ -338,7 +305,7 @@ The main tasks for this exercise are as follows:
 
 11. In Upload Files dialog box, click on the ellipsis next to the **Selected files** text box.
 
-12. In the **Choose files to upload** dialog box, browse to **Labfiles\Starter\DP-200.2\Static Files** folder. Highlight the following files:
+1. In the **Choose files to upload** dialog box, browse to **C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.2Labfiles\Static Files** folder. Highlight the following files:
 
     - DimDate2.txt
 
@@ -346,7 +313,7 @@ The main tasks for this exercise are as follows:
 
 14. In the **Upload Files** screen, click on the **Upload** button.
 
-15. Repeat the steps to upload the preferences.JSON file from the **Labfiles\Starter\DP-200.2\logs** folder to the **data** file system in the Data Lake Store gen2
+1. Repeat the steps to upload the preferences.JSON file from the **C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.2\logs** folder to the **data** file system in the Data Lake Store gen2
 
    > **Note**: The upload of the files will take approximately 5 seconds. You will see a message in Azure Storage Explorer that states **Your view may be out of data. Do you want to refresh? Click Yes**. Once completed, all two files will appear in a list in the upload blobs screen.
 
@@ -360,4 +327,4 @@ The main tasks for this exercise are as follows:
 
 19. Return to the Azure portal, and navigate to the **Home** blade.
 
-> **Result**: After you completed this exercise, you have created a Data Lake Gen II Storage account named awdlsstudxx that has a file system named data that contains two weblog files that are ready to be used by the Data scientists at AdventureWorks.
+> **Result**: After you completed this exercise, you have created a Data Lake Gen II Storage account named awdlsstud(deploymentID) that has a file system named data that contains two weblog files that are ready to be used by the Data scientists at AdventureWorks.
