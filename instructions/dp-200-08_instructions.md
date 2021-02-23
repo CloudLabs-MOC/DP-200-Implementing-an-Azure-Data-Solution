@@ -113,7 +113,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Enabling Auditing
 
-1. In the Azure portal,  click **Resource groups**, and then click awrgstudxx, and then click on the sqlservicexx and navigate to **AdventureworksLT (sqlservicekdwj/AdventureworksLT)**.
+1. In the Azure portal,  click **Resource groups**, and then click **awrgstud-deploymentID**, and then click on the **sqlservice-deploymentId** and navigate to **AdventureworksLT (sqlservicekdwj/AdventureworksLT)**.
 
 2. In the AdventureworksLT (sqlservicekdwj/AdventureworksLT) screen, click on the **Auditing** blade.
 
@@ -123,7 +123,7 @@ The main tasks for this exercise are as follows:
 
 5. In the **Storage Setting** screen, click **Subscription - change storage subscription**, and then click your subscription.
 
-6. In the **Storage Setting** screen, click **Storage Settings - Configure required settings**. In the **Choose storage account** screen, click **awsastudxx**
+6. In the **Storage Setting** screen, click **Storage Settings - Configure required settings**. In the **Choose storage account** screen, click **awsastud(deploymentId)**
 
 7. In the **Retention Days** text box, type **90**, and then click on **OK**.
 
@@ -133,7 +133,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: Query the database
 
-1. In the Azure portal,  click **Resource groups**, and then click awrgstudxx, and then click on the sqlservicexx and navigate to **AdventureworksLT (sqlservicekdwj/AdventureworksLT)**.
+1. In the Azure portal,  click **Resource groups**, and then click **awrgstud-deploymentID**, and then click on the **sqlservice-deploymentId** and navigate to **AdventureworksLT (sqlservicekdwj/AdventureworksLT)**.
 
 2. Navigate to the **query editor**
 
@@ -153,7 +153,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 2: View the Audit Log
 
-1. Return to the Azure Portal. In the AdventureWorksLT (sqlservicexx/AdventureWorksLT) - Auditing screen, click on **View Audit Logs**
+1. Return to the Azure Portal. In the AdventureWorksLT (sqlservice-deploymentID/AdventureWorksLT) - Auditing screen, click on **View Audit Logs**
 
 2. Note in the **Audit records** log file the **Failed Authentication** record. Close down the **Audit records** screen
 
@@ -173,13 +173,13 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Changing Event Hub Permissions
 
-1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstudxx**, and then click on **xx-phoneanalysis-ehn**, where **xx** are your initials
+1. In the Azure portal, in the blade, click **Resource groups**, and then click **awrgstud-deploymentID**, and then click on **phoneanalysis-ehn-deploymentID**
 
-2. In the Azure portal, in the **xx-phoneanalysis-ehn**, where **xx** are your initials. Scroll to the bottom of the window, and click on **xx-phoneanalysis-eh** event hub.
+2. In the Azure portal, in the **phoneanalysis-ehn-deploymentID**. Scroll to the bottom of the window, and click on **co-phoneanalysis-eh** event hub.
 
 3. To grant access to the event hub, click **Shared access policies**.
 
-4. Under the **xx-phoneanalysis-eh - Shared access policies** screen, click on **phoneanalysis-eh-sap**.
+4. Under the **co-phoneanalysis-eh - Shared access policies** screen, click on **phoneanalysis-eh-sap**.
 
 5. Click on the checkbox next to the **Manage** permissions to remove it, and then click **Save**.
 
