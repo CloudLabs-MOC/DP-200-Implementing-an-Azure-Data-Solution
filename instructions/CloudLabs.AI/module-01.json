@@ -1,9 +1,9 @@
 [ {
-  "Name": "Working with Data Storage",
+  "Name": "Enabling Team Based Data Science with Azure Databricks",
   "Language": "English",
   "Files": [
     {
-      "RawFilePath": "https://raw.githubusercontent.com/vnvbadri/DP-200-Implementing-an-Azure-Data-Solution/tree/prodInstructions/dp-200-02_instructions.md",
+      "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/DP-200-Implementing-an-Azure-Data-Solution/tree/prodInstructions/dp-200-03_instructions.md",
       "Order": 1
     }
   ]

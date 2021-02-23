@@ -1,11 +1,11 @@
-﻿# DP 200 - Implementing a Data Platform Solution
-# Lab 3 - Enabling Team Based Data Science with Azure Databricks
+# DP 200 - Implementing a Data Platform Solution
+# Lab 2 - Enabling Team Based Data Science with Azure Databricks
 
 **Estimated Time**: 75 minutes
 
-**Pre-requisites**: It is assumed that the case study for this lab has already been read. It is assumed that the content and lab for module 1: Azure for the Data Engineer has also been completed
+**Pre-requisites**: It is assumed that the case study for this lab has already been read.
 
-**Lab files**: The files for this lab are located in the _Allfiles\Labfiles\Starter\DP-200.3_ folder.
+**Lab files**: The files for this lab are located in the `C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter` folder inside the virtual machine.
 
 ## Lab overview
 
@@ -33,7 +33,7 @@ At the end of this lad, you will have:
 3. Read data with Azure Databricks
 4. Performed transformations with Azure Databricks
 
-> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
+> **IMPORTANT**: As you go through this lab, make a note of any issue(s) that you have encountered in any provisioning or configuration tasks and log it in the table in the document located at _C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\DP-200-Issues-Doc.docx_. Document the Lab number, note the technology, Describe the issue, and what was the resolution. Save this document as you will refer back to it in a later module.
 
 ## Exercise 1: Explain Azure Databricks
 
@@ -47,19 +47,12 @@ The main task for this exercise are as follows:
 
 1. From the content you have learned in this course so far, identify the digital transformation requirement that Azure Databricks will meet and a candidate data source for Azure Databricks.
 
-2. The instructor will discuss the findings with the group.
 
 ### Task 1: Define the digital transformation and candidate data source.
 
-1. From the lab virtual machine, start **Microsoft Word**, and open up the file **DP-200-Lab03-Ex01.docx** from the **Allfiles\Labfiles\Starter\DP-200.3** folder.
+1. From the lab virtual machine, start **Microsoft Word**, and open up the file **DP-200-Lab03-Ex01.docx** from the **C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.3** folder.
 
 2. Spend **10 minutes** documenting the digital transformation requirement and candidate data source as outlined in the case study and the scenario of this lab.
-
-### Task 2: Discuss the findings with the Instructor
-
-1. The instructor will stop the group to discuss the findings.
-
-> **Result**: After you completed this exercise, you have created a Microsoft Word document that identifies the digital transformation requirement that Azure Databricks will meet and a candidate data source.
 
 ## Exercise 2: Work with Azure Databricks
   
@@ -87,11 +80,11 @@ The main tasks for this exercise are as follows:
 
 5. In the **Azure Databricks Service** blade, create an Azure Databricks Workspace with the following settings:
 
-    - **Workspace name**: **awdbwsstudxx**, where **xx** are your initials.
+    - **Workspace name**: **awdbwsstudxxxxxx**, where **xxxxxx** is the deployment-id.
 
     - **Subscription**: the name of the subscription you are using in this lab
 
-    - **Resource group**: **awrgstudxx**, where **xx** are your initials.
+    - **Resource group**: use existing resource group with name **awrgstud-xxxxxx**, where **xxxxxx** is the deployment-id.
 
     - **Location**: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs.
 
@@ -110,15 +103,15 @@ The main tasks for this exercise are as follows:
 
 2. In the Azure portal, navigate to the **Resource group** screen.
 
-3. In the Resource groups screen, click on the ****awrgstudxx** resource group, where **xx** are your initials.
+1. In the Resource groups screen, click on the **awrgstud-xxxxxx** resource group, where **xxxxxx** is the deployment-id.
 
-4. In the **awrgstudxx** screen, click **awdbwsstudxx**, where **xx** are your initials to open Azure Databricks. This will open your Azure Databricks service.
+1. In the **awrgstudxxxxxx** screen, click **awdbwsstudxxxxxx**, where **xxxxxx** is  to open Azure Databricks. This will open your Azure Databricks service.
 
     ![Azure Databricks Service in the Azure portal](Linked_Image_Files/M03-E02-T02-img01.png)
 
 ### Task 3: Launch a Databricks Workspace and create a Spark Cluster.
 
-1. In the Azure portal, in the **awdbwsstudxx** screen, click on the button **Launch Workspace**.
+1. In the Azure portal, in the **awdbwsstudxxxxxx** screen, click on the button **Launch Workspace**.
 
     > **Note**: You will be signed into the Azure Databricks Workspace in a separate tab in Microsoft Edge.
 
@@ -126,7 +119,7 @@ The main tasks for this exercise are as follows:
 
 3. In the **Create Cluster** screen, under New Cluster, create a Databricks Cluster with the following settings, and then click on **Create Cluster**:
 
-    - **Cluster name**: **awdbclstudxx**, where **xx** are your initials.
+    - **Cluster name**: **awdbclstudxxxxxx**, where **xxxxxx** is the deployment-id.
 
     - **Cluster Mode**: **Standard**
 
@@ -172,13 +165,13 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Confirm the creation of the Databricks cluster
 
-1. Return back to Microsoft Edge, under **Interactive Clusters** confirm that the state column is set to **Running** for the cluster named **awdbclstudxx**, where **xx** are your initials.
+1. Return back to Microsoft Edge, under **Interactive Clusters** confirm that the state column is set to **Running** for the cluster named **awdbclstudxxxxxx**, where **xxxxxx** is the deployment-id.
 
 ### Task 2: Collect the Azure Data Lake Store Gen2 account name
 
-1. In Microsoft Edge, click on the  Azure portal tab, click **Resource groups**, and then click **awrgstudxx**, and then click on **awdlsstudxx**, where **xx** are your initials.
+1. In Microsoft Edge, click on the  Azure portal tab, click **Resource groups**, and then click **awrgstud-xxxxxx**,where **xxxxxx** is the deployment-id, and then click on **awdlsstudxxxxxx**, where **xxxxxx** is the deployment-id.
 
-2. In the **awdlsstudxx** screen, under settings, click on **Access keys**, and then click on the copy icon next to the **Storage account name**, and paste it into Notepad.
+1. In the **awdlsstudxxxxxx** screen, under settings, click on **Access keys**, and then click on the copy icon next to the **Storage account name** and paste it into Notepad.
 
     ![Accessing Data Lake Storage account name in the Azure portal](Linked_Image_Files/M03-E03-T02-img01.png)
 
@@ -190,15 +183,15 @@ The main tasks for this exercise are as follows:
 
 3. In the **Microsoft - App registrations** screen, click on the **+ New registration** button.
 
-4. In the register an application screen, provide the **name** of **DLAccess** and under the **Redirect URI (optional)** section, ensure **Web** is selected and type **http://localhost**for the application value. After setting the values.
+1. In the register an application screen, provide the **name** of **DLAccessxxxxxx** where 'xxxxxx' is the deploymentID and under the **Redirect URI (optional)** section, ensure **Web** is selected and type **https://adventure-works.com/exampleapp** for the application value. After setting the values.
 
     ![Registering an application in the Azure portal](Linked_Image_Files/M03-E03-T03-img01.png)
 
 5. Click **Register**. The DLAccess screen will appear.
 
-6. In the **DLAccess** registered app screen, copy the **Application  (client) ID** and **Directory (tenant) ID** and paste both into Notepad.
+1. In the **DLAccessxxxxxx** registered app screen, copy the **Application  (client) ID** and **Directory (tenant) ID** and paste both into Notepad.
 
-7. In the **DLAccess** registered app screen, click on **Certificates and Secrets**, and the click **+ New Client Secret**
+1. In the **DLAccessxxxxxx** registered app screen, click on **Certificates and Secrets**, and the click **+ New Client Secret**
 
 8. In the Add a client secret screen. type a **description** of **DL Access Key**, and a **duration** of **In 1 year** for the key. When done, click **Add**.
 
@@ -210,9 +203,9 @@ The main tasks for this exercise are as follows:
 
 9. Copy the **Application key value** and paste it into Notepad
 
-10. Assign the Storage Blob Data Contributor permission to your resource group. In the Azure portal, click on the **Home** hyperlink, and then the **Resource groups** icon, click on the resource group **awrgstudxx**, where **xx** are your initials.
+1. Assign the Storage Blob Data Contributor permission to your resource group. In the Azure portal, click on the **Home** hyperlink, and then the **Resource groups** icon, click on the resource group **awrgstudxxxxxx**, where **xxxxxx** is the deployment-id.
 
-11. In the **awrgstudxx** screen, click on **Access Control (IAM)** 
+1. In the **awrgstudxxxxxx** screen, click on **Access Control (IAM)**
 
 12. Click on the **Role assignments** tab. 
 
@@ -220,7 +213,7 @@ The main tasks for this exercise are as follows:
 
 14. In the **Add role assignment** blade, under Role, select **Storage Blob Data Contributor**.
 
-15. In the **Add role assignment** blade, under Select, select **DLAccess**, and then click **Save**.
+1. In the **Add role assignment** blade, under Select, select **DLAccessxxxxxx** where xxxxxx is deploymentID and confirm if **DLAccessxxxxxx** is selected, and then click **Save**.
 
 16. In the Azure portal, click the **Home** hyperlink, and then click the **Azure Active Directory** icon, Note **your role**. If you have the User role, you must make sure that non-administrators can register applications.
 
@@ -232,7 +225,7 @@ The main tasks for this exercise are as follows:
 
 20. Click on the Copy icon next to the **Directory ID** to get your tenant ID and paste this into notepad.
 
-21. Save the notepad document in the folder **Allfiles\Labfiles\Starter\DP-200.3** as **DatabricksDetails.txt**
+1. Save the notepad document in the folder **C:\AllFiles\DP-200-Implementing-an-Azure-Data-Solution-master\Labfiles\Starter\DP-200.3** as **DatabricksDetails.txt**
 
 ### Task 4: Create a Databricks Notebook and connect to a Data Lake Store.
 
@@ -384,41 +377,6 @@ The main tasks for this exercise are as follows:
 
 > **Result**: After you completed this exercise, you have created an annotation within a notebook.
 
-### Task 4: If time permits or post course review
-
-If you have completed this lab early, the following sections provide links to content that can help you learn more about basic and advanced transformations in Azure.
-
-If the url are inaccessible, there is a copy of the notebooks ion the _Allfiles\Labfiles\Starter\DP-200.3\Post Course Review_ folder
-
-**Basic transformations**
-
-1. Within the Workspace, using the command bar on the left, select **Workspace**, **Users**, and select **your username** (the entry with house icon).
-
-2. In the blade that appears, select the **downwards pointing chevron next to your name**, and select **Import**.
-
-3. On the Import Notebooks dialog, select **URL below** and paste in the following URL: 
-
-```url
-    https://github.com/MicrosoftDocs/mslearn-perform-basic-data-transformation-in-azure-databricks/blob/master/DBC/05.1-Basic-ETL.dbc?raw=true
-```
-
-4. Select **Import**.
-
-5. A folder named **05.1-Basic-ETL** after the import should appear. Select that folder.
-
-6. The folder will contain one or more notebooks that you can use to learn basic transformations using **scala** or **python**.
-
-Follow the instructions within the notebook, until you've completed the entire notebook. Then continue with the remaining notebooks in order:
-
-- **01-Course-Overview-and-Setup** - This notebook gets you started with your Databricks workspace.
-- **02-ETL-Process-Overview** - This notebook contains exercises to help you query, large data files and visualize your results.
-- **03-Connecting-to-Azure-Blob-Storage** - You perform basic aggregation and Joins in this notebook.
-- **04-Connecting-to-JDBC** - This notebook lists the steps for accessing data from various sources using Databricks.
-- **05-Applying-Schemas-to-JSON** - In this notebook you learn how to query JSON & Hierarchical Data with DataFrames
-- **06-Corrupt-Record-Handling** - This notebook lists the exercises that help you understand how to create ADLS and use Databricks DataFrames to query and analyze this data.
-- **07-Loading-Data-and-Productionalizing** - Here you use Databricks to query and analyze data stores in Azure Data Lake Storage Gen2.
-- **Parsing-Nested-Data** - This notebook is located in the Optional subfolder, and includes a sample project for you explore later on in your own time.
-
 >[Note] You'll find corresponding notebooks within the Solutions subfolder. These contain completed cells for exercises that ask you to complete one or more challenges. Refer to these if you get stuck or simply want to see the solution.
 
 **Advanced transformations**
@@ -450,4 +408,3 @@ Follow the instructions within the notebook, until you've completed the entire n
 - **07-Table-Management** - Here you handle managed and unmanaged tables to optimize your data storage.
 - **Custom-Transformations** - This notebook is located in the Optional subfolder, and includes a sample project for you to explore later on in your own time.
 
->[Note] You'll find corresponding notebooks within the Solutions subfolder. These contain completed cells for exercises that ask you to complete one or more challenges. Refer to these if you get stuck or simply want to see the solution.
