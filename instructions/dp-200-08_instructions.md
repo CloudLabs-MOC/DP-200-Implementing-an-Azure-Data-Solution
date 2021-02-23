@@ -91,8 +91,6 @@ The main tasks for this exercise are as follows:
 
 1. Determining the appropriate security approach for Azure Blob
 
-2. Discuss the findings with the Instructor
-
 ### Task 1: Determining the appropriate security approach for Azure Blob
 
 1. You have been approached by your in-house web developer to help give access to a third party web design company to the web images that are in the awsastudxx storage account. As a senior data engineer within AdventureWorks, what steps would you need to take to ensure this can happen while applying the correct due diligence.
